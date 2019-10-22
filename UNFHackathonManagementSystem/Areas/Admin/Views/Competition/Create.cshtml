@@ -1,0 +1,90 @@
+﻿@model Competition
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br/>
+<h2 class="text-info">Create Competition</h2>
+<br/>
+
+<form method="post" asp-action="Create">
+    <div>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Name" class="col-form=label"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Name" class="form-control" />
+            </div>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Type" class="col-form=label"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Type" class="form-control" />
+            </div>
+            <span asp-validation-for="Type" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Location" class="col-form=label"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Location" class="form-control" />
+            </div>
+            <span asp-validation-for="Location" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Date" class="col-form=label"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Date" class="form-control" />
+            </div>
+            <span asp-validation-for="Date" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Time" class="col-form=label"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Time" class="form-control" />
+            </div>
+            <span asp-validation-for="Time" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Organizer" class="col-form=label"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Organizer" class="form-control" />
+            </div>
+            <span asp-validation-for="Organizer" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Description" class="col-form=label"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Description" class="form-control" />
+            </div>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-5 offset-2">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="submit" class="btn btn-info form-control" value="Create" />
+                    </div>
+                    <div class="col-6">
+                        <a asp-action="Index" class="btn btn-success form-control">Back to List</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

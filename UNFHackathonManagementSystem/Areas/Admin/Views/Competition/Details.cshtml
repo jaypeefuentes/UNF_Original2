@@ -1,0 +1,80 @@
+﻿@model UNFHackathonManagementSystem.Models.Competition
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<br />
+<h2 class="text-info">Competition Details</h2>
+<br />
+
+<div>
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Name"></label>
+        </div>
+        <div class="col-5">
+            <input asp-for="Name" disabled class="form-control" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Type"></label>
+        </div>
+        <div class="col-5">
+            <input asp-for="Type" disabled class="form-control" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Location"></label>
+        </div>
+        <div class="col-5">
+            <input asp-for="Location" disabled class="form-control" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Date"></label>
+        </div>
+        <div class="col-5">
+            <input asp-for="Date" disabled class="form-control" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Time"></label>
+        </div>
+        <div class="col-5">
+            <input asp-for="Time" disabled class="form-control" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Organizer"></label>
+        </div>
+        <div class="col-5">
+            <input asp-for="Organizer" disabled class="form-control" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Description"></label>
+        </div>
+        <div class="col-5">
+            <input asp-for="Description" disabled class="form-control" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-5 offset-2">
+            <div class="row">
+                <div class="col-6">
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-info form-control">Edit</a>
+                </div>
+                <div class="col-6">
+                    <a asp-action="Index" class="btn btn-success form-control">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
