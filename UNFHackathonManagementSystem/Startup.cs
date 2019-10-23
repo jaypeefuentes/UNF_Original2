@@ -42,6 +42,14 @@ namespace UNFHackathonManagementSystem
                 facebookOptions.AppSecret = "e24b09eac2fc1902cf7836aaf4187203";
             });
 
+           services.AddAuthentication().AddGoogle(googleOptions =>
+          {
+
+              googleOptions.ClientId = "1046064640595 - 84imd1c365djdlj9eunve3vg58h2b9r8.apps.googleusercontent.com";
+              googleOptions.ClientSecret = "pz6IyZBnnrh9x4Uli2lEk9DU";
+;
+          });
+
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
