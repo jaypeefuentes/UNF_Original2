@@ -25,6 +25,7 @@ namespace UNFHackathonManagementSystem
 
         public IConfiguration Configuration { get; }
 
+    
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -33,6 +34,12 @@ namespace UNFHackathonManagementSystem
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+
+            services.AddAuthentication().AddFacebook(facebookOptions =>
+            {
+                facebookOptions.AppId = "399252667643514";
+                facebookOptions.AppSecret = "e24b09eac2fc1902cf7836aaf4187203";
             });
 
             services.AddDbContext<ApplicationDbContext>(options =>
