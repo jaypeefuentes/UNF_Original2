@@ -50,6 +50,7 @@ namespace UNFHackathonManagementSystem
 ;
           });
 
+            // Started a Comment
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
