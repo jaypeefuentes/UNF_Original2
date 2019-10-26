@@ -42,13 +42,11 @@ namespace UNFHackathonManagementSystem
                 facebookOptions.AppSecret = "e24b09eac2fc1902cf7836aaf4187203";
             });
 
-           services.AddAuthentication().AddGoogle(googleOptions =>
-          {
-
-              googleOptions.ClientId = "1046064640595 - 84imd1c365djdlj9eunve3vg58h2b9r8.apps.googleusercontent.com";
-              googleOptions.ClientSecret = "pz6IyZBnnrh9x4Uli2lEk9DU";
-;
-          });
+            services.AddAuthentication().AddGoogle(go =>
+            {
+                go.ClientId = "509364459816-a9l15pbbbttp56o9ftd6qqk2c96vnqgd.apps.googleusercontent.com";
+                go.ClientSecret = "RPUTgGlI4-25Pzac0FrBwDNb";
+            });
 
             // Started a Comment
             services.AddDbContext<ApplicationDbContext>(options =>
