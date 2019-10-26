@@ -48,6 +48,12 @@ namespace UNFHackathonManagementSystem
                 go.ClientSecret = "RPUTgGlI4-25Pzac0FrBwDNb";
             });
 
+            services.AddAuthentication().AddTwitter(twitterOptions =>
+            {
+                twitterOptions.ConsumerKey = "S11nJwvAMSZWW0hImuSMa76Ai";
+                twitterOptions.ConsumerSecret = "7RV5ZntaAA6BuOV3KQMOZMr7NcI62cnlO54EarYdLATLMn0PZa";
+            });
+
             // Started a Comment
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
