@@ -4,6 +4,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using UNFHackathonManagementSystem.Data;
 using UNFHackathonManagementSystem.Models;
 
 namespace UNFHackathonManagementSystem.Controllers
@@ -11,9 +13,19 @@ namespace UNFHackathonManagementSystem.Controllers
     [Area("Participant")]
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly ApplicationDbContext _db;
+
+        public HomeController(ApplicationDbContext db)
         {
-            return View();
+            _db = db;
+        }
+        public async Task<IActionResult> Index()
+        {
+            IndexViewModel IndexVM = new IndexViewModel()
+                {
+                     CompetitionItem = await _db.Competition.ToListAsync()
+            };
+            return View(IndexVM);
         }
 
         public IActionResult Privacy()
