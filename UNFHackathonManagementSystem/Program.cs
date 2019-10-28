@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 
 namespace UNFHackathonManagementSystem
 {
-    public class Program
+    public class Program //testifchriscangetongithub 
     {
         public static void Main(string[] args)
         {
