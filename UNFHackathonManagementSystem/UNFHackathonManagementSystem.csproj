@@ -12,15 +12,13 @@
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Twitter" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
   </ItemGroup>
 
 
   <ItemGroup>
     <Folder Include="Areas\Competition\Controllers\" />
     <Folder Include="Areas\Competition\Views\" />
-    <Folder Include="Areas\LeaderBoard\Controllers\" />
-    <Folder Include="Areas\LeaderBoard\Views\" />
     <Folder Include="Controllers\" />
     <Folder Include="wwwroot\css\images\" />
   </ItemGroup>
