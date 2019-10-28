@@ -15,6 +15,6 @@ namespace UNFHackathonManagementSystem.Data
         }
 
         public DbSet<Competition> Competition { get; set; }
-        public object AplicationUser { get; internal set; }
+        
     }
 }
