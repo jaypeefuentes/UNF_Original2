@@ -64,6 +64,11 @@ namespace UNFHackathonManagementSystem.Areas.Identity.Pages.Account
             public string Username { get; set; }
 
             [Required]
+            [Range(typeof(bool), "true", "false")]
+            [Display(Name = "Student")]
+            public bool Student { get; set; }
+
+            [Required]
             [DataType(DataType.Text)]
             [Display(Name = "Major")]
             public string Major { get; set; }
