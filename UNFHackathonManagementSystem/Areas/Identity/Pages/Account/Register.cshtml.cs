@@ -64,7 +64,7 @@ namespace UNFHackathonManagementSystem.Areas.Identity.Pages.Account
             public string Username { get; set; }
 
             [Required]
-            [Range(typeof(bool), "true", "false")]
+            [Range(typeof(bool), "true", "true")]
             [Display(Name = "Student")]
             public bool Student { get; set; }
 
