@@ -1,0 +1,92 @@
+﻿@model UNFHackathonManagementSystem.Models.ViewModels.LeaderBoardAndCompetitionViewModel
+@using UNFHackathonManagementSystem.Extensions
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<h2 class="text-info">Create Leaderboard</h2>
+<br />
+
+<div>
+    <div class="col-8">
+        <form asp-action="Create">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group row">
+                <div class="col-3">
+                    <label asp-for="Leaderboard.CompetitionId" class="col-form=label"></label>
+                </div>
+                <div class="col-5">
+                    <select id="ddlCompetitionlist" asp-for="Leaderboard.CompetitionId" asp-items="Model.CompetitionList.ToSelectListItem(Model.Leaderboard.CompetitionId)" class="form-control"></select>
+                </div>
+            </div>
+
+            <fieldset class="col-12" style="color:black">
+                <legend>Participant 1</legend>
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="Leaderboard.Name" class="col-form=label"></label>
+                    </div>
+                    <div class="col-5">
+                        <input asp-for="Leaderboard.Name" class="form-control" />
+                    </div>
+                    <span asp-validation-for="Leaderboard.Name" class="text-danger"></span>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="Leaderboard.Place" class="col-form=label"></label>
+                    </div>
+                    <div class="col-5">
+                        <input asp-for="Leaderboard.Place" class="form-control" />
+                    </div>
+                    <span asp-validation-for="Leaderboard.Place" class="text-danger"></span>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="Leaderboard.Score" class="col-form=label"></label>
+                    </div>
+                    <div class="col-5">
+                        <input asp-for="Leaderboard.Score" class="form-control" />
+                    </div>
+                    <span asp-validation-for="Leaderboard.Score" class="text-danger"></span>
+                </div>
+
+            </fieldset>
+
+
+
+
+
+
+
+            <div class="form-group row">
+                <div class="col-5 offset-3">
+                    <div class="row">
+                        <div class="col-6">
+                            <input type="submit" class="btn btn-info form-control" value="Create" />
+                        </div>
+                        <div class="col-6">
+                            <a asp-action="Index" class="btn btn-success form-control">Back to List</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+</div>
+    <div class="col-3 offset-1">
+        @if (Model.LeaderBoardList.Count() > 0)
+        {
+            <p>Existing Leaderboards:</p>
+
+            <div id="LeaderBoardList">
+                <ul class="list-group"></ul>
+            </div>
+        }
+    </div> 
+</div>
+

@@ -15,6 +15,7 @@ namespace UNFHackathonManagementSystem.Data
         }
 
         public DbSet<Competition> Competition { get; set; }
-        
+        public DbSet<Leaderboard> Leaderboard { get; set; }
+
     }
 }
