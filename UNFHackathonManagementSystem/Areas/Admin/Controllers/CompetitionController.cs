@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UNFHackathonManagementSystem.Data;
@@ -14,10 +15,12 @@ namespace UNFHackathonManagementSystem.Areas.Admin
     public class CompetitionController : Controller
     {
         private readonly ApplicationDbContext _db;
+        private readonly IHostingEnvironment _hostingEnvironment;
 
-        public CompetitionController(ApplicationDbContext db)
+        public CompetitionController(ApplicationDbContext db, IHostingEnvironment hostingEnvironment)
         {
             _db = db;
+            _hostingEnvironment = hostingEnvironment;
         }
 
         //GET 

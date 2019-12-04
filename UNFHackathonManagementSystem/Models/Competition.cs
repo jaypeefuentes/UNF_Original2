@@ -25,6 +25,8 @@ namespace UNFHackathonManagementSystem.Models
 
         public string Organizer { get; set; }
 
+        public string Image { get; set; }
+
         public string Description { get; set; }
     }
 }
