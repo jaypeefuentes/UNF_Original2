@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using UNFHackathonManagementSystem.Data.Migrations;
 
 namespace UNFHackathonManagementSystem.Models
 {
@@ -10,6 +11,7 @@ namespace UNFHackathonManagementSystem.Models
     {
         public int Id { get; set; }
 
-        public int CompetitionItemId { get; set; }
+        public int CompetitionId { get; set; }
+
     }
 }
