@@ -19,9 +19,6 @@
                 <input asp-for="Input.Username" class="form-control" />
                 <span asp-validation-for="Input.Username" class="text-danger"></span>
                 </div>
-
-
-
                 <div class="form-group">
                     <label asp-for="Input.Email"></label>
                     <input asp-for="Input.Email" class="form-control" />
@@ -36,6 +33,16 @@
                     <label asp-for="Input.ConfirmPassword"></label>
                     <input asp-for="Input.ConfirmPassword" class="form-control" />
                     <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.Student">Are you a UNF student?</label>
+                    @Html.RadioButtonFor(x => x.Input.Student, true) Yes
+                    @Html.RadioButtonFor(x => x.Input.Student, false) No
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.Major"></label>
+                    <input asp-for="Input.Major" class="form-control" />
+                    <span asp-validation-for="Input.Major" class="text-danger"></span>
                 </div>
 
 
