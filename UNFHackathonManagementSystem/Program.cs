@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
+//Test join branch
 namespace UNFHackathonManagementSystem
 {
     public class Program //testifchriscangetongithub 
